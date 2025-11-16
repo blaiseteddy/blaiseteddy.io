@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Portfolio - FolioOne Bootstrap Template</title>
+  <title>Portfolio - Compétences</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -17,6 +17,15 @@
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Boxicons -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -27,13 +36,150 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: FolioOne
-  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-  * Updated: Aug 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    body {
+      
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .main {
+      
+      padding: 60px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #00d9ff;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 5fr);
+      gap: 20px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 992px) {
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .skill-box {
+      background: #000;
+      border: 2px solid #00d9ff;
+      border-radius: 20px;
+      padding: 40px 30px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+      width: 90%;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(0, 217, 255, 0.6);
+      border-color: #00ffff;
+    }
+
+    .skill-box::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #00d9ff, #00ffff, #00d9ff);
+      border-radius: 20px;
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .skill-box:hover::before {
+      opacity: 0.3;
+    }
+
+    .icon {
+      font-size: 4rem;
+      color: #00d9ff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .skill-box h3 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .skill-box ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+    }
+
+    .skill-box ul li {
+      color: #fff;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+      line-height: 1;
+    }
+
+    .skill-box ul li::before {
+      content: "•";
+      color: #00d9ff;
+      font-size: 1.5rem;
+      position: absolute;
+      left: 0;
+      top: -5px;
+    }
+
+    .skill-box p {
+      color: #00d9ff;
+      font-size: 0.8rem;
+      text-align: center;
+      margin: 0;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    /* Header Styles */
+    .header {
+      background-color: rgba(0, 0, 0, 0.95) !important;
+      border-bottom: 1px solid #00d9ff;
+    }
+
+    .navmenu a {
+      color: #fff !important;
+    }
+
+    .navmenu a:hover,
+    .navmenu a.active {
+      color: #00d9ff !important;
+    }
+
+    .header-social-links a {
+      color: #00d9ff !important;
+    }
+  </style>
 </head>
 
 <body class="portfolio-page">
@@ -41,22 +187,17 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
       <nav id="navmenu" class="navmenu">
         <ul>
-           <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">Profil</a></li>
           <li><a href="resume.html">Formation</a></li>
           <li><a href="services.html">Expériences</a></li>
-          <li><a href="portfolio.html">Compétences</a></li>
-           <li><a href="projet.html">Projets
+          <li><a href="portfolio.html" class="active">Compétences</a></li>
+          <li><a href="projet.html">Projets</a></li>
           <li><a href="certif.html">Certification</a></li>
           <li><a href="contact.html">Contact</a></li>
-         
+        </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
@@ -72,131 +213,130 @@
 
   <main class="main">
 
-    <!-- services  Section -->
     <section class="services section">
-        <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Compétences</h2>
+      </div>
 
+      <div class="container">
         <div class="skills-grid">
 
-            <!-- Systèmes -->
-            <div class="skill-box">
-                <div class="icon">
-                    <i class="fas fa-desktop"></i>
-                </div>
-                <h3>Systèmes</h3>
-               
-                <ul>
-                    <li>Installation/configuration des OS, des équipements</li>
-                    <li>Gestion des utilisateurs,des droits d'accès, des fichiers</li>
-                    <li>Sécurisation des systèmes (mises à jour, antivirus, ...)</li>
-                    <li>Automatisation des tâches système (scripts Bash)</li>
-                    <li>Surveillance de l'intégrité des systèmes</li>
-                    <li>Dépannage des pannes systèmes</li>
-                    <li>Gestion de base de données</li>
-                </ul>
-                <p>Windows, Windows Server, Ubuntu, Debian, Kali, PfSense</p>
+          <!-- Systèmes -->
+          <div class="skill-box">
+            <div class="icon">
+              <i class="fas fa-desktop"></i>
             </div>
+            <h3>Systèmes</h3>
+            <ul>
+              <li>Installation/configuration des OS, des équipements</li>
+              <li>Gestion des utilisateurs, des droits d'accès, des fichiers</li>
+              <li>Sécurisation des systèmes (mises à jour, antivirus, ...)</li>
+              <li>Automatisation des tâches système (scripts Bash)</li>
+              <li>Surveillance de l'intégrité des systèmes</li>
+              <li>Dépannage des pannes systèmes</li>
+              <li>Gestion de base de données</li>
+            </ul>
+            <p>Windows, Windows Server, Ubuntu, Debian, Kali, PfSense</p>
+          </div>
 
-            <!-- Réseaux -->
-            <div class="skill-box">
-                <div class="icon">
-                    <i class="fas fa-network-wired"></i>
-                </div>
-                <h3>Réseaux</h3>
-                <ul>
-                    <li>Mise en place de réseaux locaux (LAN)</li>
-                    <li>Configuration de routeurs et de commutateurs</li>
-                    <li>Configuration et gestion des pare-feu</li>
-                    <li>Dépannage et diagnostic réseau</li>
-                    <li>Analyse du trafic réseau</li>
-                    <li>Mise en place et gestion des VLANs</li>
-                    <li>Utilisation des outils de diagnostic</li>
-                </ul>
-                <p>Cisco, Packet Tracer, PfSense, Wireshark, Nmap</p>
+          <!-- Réseaux -->
+          <div class="skill-box">
+            <div class="icon">
+              <i class="fas fa-network-wired"></i>
             </div>
+            <h3>Réseaux</h3>
+            <ul>
+              <li>Mise en place de réseaux locaux (LAN)</li>
+              <li>Configuration de routeurs et de commutateurs</li>
+              <li>Configuration et gestion des pare-feu</li>
+              <li>Dépannage et diagnostic réseau</li>
+              <li>Analyse du trafic réseau</li>
+              <li>Mise en place et gestion des VLANs</li>
+              <li>Utilisation des outils de diagnostic</li>
+            </ul>
+            <p>Cisco, Packet Tracer, PfSense, Wireshark, Nmap</p>
+          </div>
 
-            <!-- Cloud et Virtualisation -->
-            <div class="skill-box">
-                <div class="icon">
-                    <i class="fas fa-cloud"></i>
-                </div>
-                <h3>Cloud et Virtualisation</h3>
-                <ul>
-                    <li>Compréhension des service cloud (IaaS/PaaS/SaaS)</li>
-                    <li>Mise en place de lab virtuel</li>
-                    <li>Création et gestion de machines virtuelles (VM)</li>
-                    <li>Installation et configuration des hyperviseurs</li>
-                    <li>Migration de VM entre hôtes physiques</li>
-                    <li>Création et gestion de réseaux virtuels</li>
-                    <li>Déploiement de solutions de conteneurisation</li>
-                </ul>
-                <p>VirtualBox, VMware, Proxmox, Docker</p>
+          <!-- Cloud et Virtualisation -->
+          <div class="skill-box">
+            <div class="icon">
+              <i class="fas fa-cloud"></i>
             </div>
-           
-            <!-- Cybersécurité -->
-            <div class="skill-box">
-                <div class="icon">
-                    <i class='bx bxs-lock'></i>
-                </div>
-                <h3>Cybersécurité</h3>
-                <ul>
-                    <li>Protection des données personnelles</li>
-                    <li>Sensibilisation des utilisateurs</li>
-                    <li>Surveillance et analyse des logs</li>
-                    <li>Gestion de mot de passe et de leur complexité</li>
-                    <li>Détection des intrusions</li>
-                    <li>Analyse des menaces</li>
-                    <li>Chiffrement de fichiers avec clé publique/privée</li>
-                    <li>Stéganographie (fichiers cachés dans des images)</li>
-                </ul>
-                <p>Gestion d'utilisateurs/droit d'accès, normes/lois, vocabulaire cyber</p>
-            </div>
+            <h3>Cloud et Virtualisation</h3>
+            <ul>
+              <li>Compréhension des service cloud (IaaS/PaaS/SaaS)</li>
+              <li>Mise en place de lab virtuel</li>
+              <li>Création et gestion de machines virtuelles (VM)</li>
+              <li>Installation et configuration des hyperviseurs</li>
+              <li>Migration de VM entre hôtes physiques</li>
+              <li>Création et gestion de réseaux virtuels</li>
+              <li>Déploiement de solutions de conteneurisation</li>
+            </ul>
+            <p>VirtualBox, VMware, Proxmox, Docker</p>
+          </div>
 
-            <!-- Outils -->
-            <div class="skill-box">
-                <div class="icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3>Outils</h3>
-                <ul>
-                    <li>Supervision : Zabbix, Prometheus, Snort</li>
-                    <li>Analyse réseau : Wireshark, Nmap</li>
-                    <li>Scan de failles : Nessus, Metasploit</li>
-                    <li>Protection de serveurs : Fail2Ban</li>
-                    <li>Gestion de mot de passe : KeePass</li>
-                    <li>Chiffrement : VeraCrypt, GPG</li>
-                    <li>Gestion de configurations : Puppet, Ansible</li>
-                    <li>tests d'intrusion (pentest) : John The Ripper</li>
-                </ul>
-                <p>Infrastructure virtuel et infrastructure réelle</p>
+          <!-- Cybersécurité -->
+          <div class="skill-box">
+            <div class="icon">
+              <i class='bx bxs-lock'></i>
             </div>
+            <h3>Cybersécurité</h3>
+            <ul>
+              <li>Protection des données personnelles</li>
+              <li>Sensibilisation des utilisateurs</li>
+              <li>Surveillance et analyse des logs</li>
+              <li>Gestion de mot de passe et de leur complexité</li>
+              <li>Détection des intrusions</li>
+              <li>Analyse des menaces</li>
+              <li>Chiffrement de fichiers avec clé publique/privée</li>
+              <li>Stéganographie (fichiers cachés dans des images)</li>
+            </ul>
+            <p>Gestion d'utilisateurs/droit d'accès, normes/lois, vocabulaire cyber</p>
+          </div>
 
-            <!-- Projet -->
-            <div class="skill-box">
-                <div class="icon">
-                    <i class='bx bx-user-circle'></i>
-                </div>
-                <h3>Gestion de projet</h3>
-                <ul>
-                    <li>Planification de projet </li>
-                    <li>Définition des objectifs et des livrables du projet</li>
-                    <li>Gestion des ressources (humaines, matérielles)</li>
-                    <li>Planification et attribution des tâches</li>
-                    <li>Suivi des délais et respect des échéances</li>
-                    <li>Organisation de réunions de suivi de projet</li>
-                    <li>Gestion de la documentation de projet</li>
-                </ul>
-                <p>Kanboard, Gantt, Trello, Slack, Office 365, Google suite</p>
+          <!-- Outils -->
+          <div class="skill-box">
+            <div class="icon">
+              <i class="fas fa-tools"></i>
             </div>
+            <h3>Outils</h3>
+            <ul>
+              <li>Supervision : Zabbix, Prometheus, Snort</li>
+              <li>Analyse réseau : Wireshark, Nmap</li>
+              <li>Scan de failles : Nessus, Metasploit</li>
+              <li>Protection de serveurs : Fail2Ban</li>
+              <li>Gestion de mot de passe : KeePass</li>
+              <li>Chiffrement : VeraCrypt, GPG</li>
+              <li>Gestion de configurations : Puppet, Ansible</li>
+              <li>Tests d'intrusion (pentest) : John The Ripper</li>
+            </ul>
+            <p>Infrastructure virtuel et infrastructure réelle</p>
+          </div>
+
+          <!-- Gestion de projet -->
+          <div class="skill-box">
+            <div class="icon">
+              <i class='bx bx-user-circle'></i>
+            </div>
+            <h3>Gestion de projet</h3>
+            <ul>
+              <li>Planification de projet</li>
+              <li>Définition des objectifs et des livrables du projet</li>
+              <li>Gestion des ressources (humaines, matérielles)</li>
+              <li>Planification et attribution des tâches</li>
+              <li>Suivi des délais et respect des échéances</li>
+              <li>Organisation de réunions de suivi de projet</li>
+              <li>Gestion de la documentation de projet</li>
+            </ul>
+            <p>Kanboard, Gantt, Trello, Slack, Office 365, Google suite</p>
+          </div>
+
         </div>
+      </div>
+    </section>
 
   </main>
-    </section>
-      
 
-  
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
