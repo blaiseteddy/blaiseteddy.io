@@ -842,7 +842,7 @@ section,
 
 .hero .hero-image .image-wrapper {
   position: relative;
-  max-width: 450px;
+  max-width: 385px;
   margin: 0 auto;
 }
 
@@ -3071,4 +3071,9 @@ section,
 }
 
 
-
+body {
+  background: linear-gradient(135deg, #1a2642 0%, #2d3f5f 100%);
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
