@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Portfolio - Blaise MAHOUNGOU</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  
+  <meta name="description" content="Portfolio de Blaise Mahoungou - Administrateur systèmes & réseaux, Analyste SOC">
+  <meta name="keywords" content="portfolio, administrateur systèmes, réseaux, cybersécurité, SOC">
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -16,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,13 +27,242 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: FolioOne
-  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-  * Updated: Aug 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    /* Styles spécifiques à la page d'accueil */
+    body {
+      background: linear-gradient(135deg, #1a2642 0%, #2d3f5f 100%);
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+
+    /* Header transparent */
+    #header {
+      background: rgba(26, 38, 66, 0.95) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    /* CORRECTION MENU HAMBURGER */
+    .mobile-nav-toggle {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #fff;
+      line-height: 0;
+      transition: 0.5s;
+      z-index: 9999;
+    }
+
+    @media (max-width: 1199px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .navmenu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(26, 38, 66, 0.98);
+        transition: right 0.3s ease;
+        overflow-y: auto;
+        z-index: 9997;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+      }
+      
+      .navmenu.mobile-nav-active {
+        right: 0;
+      }
+      
+      .navmenu ul {
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      .navmenu ul li {
+        margin: 10px 0;
+      }
+    }
+
+    /* Optimisation de la photo */
+    .hero-image .image-wrapper {
+      max-width: 350px;
+      margin: 0 auto;
+    }
+
+    .hero-image .image-wrapper img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+      border: 3px solid rgba(0, 212, 255, 0.3);
+    }
+
+    /* Style du bouton Portfolio */
+    .btn-portfolio {
+      display: inline-block;
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
+      color: #1a2642;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: none;
+      box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+      margin-left: 15px;
+    }
+
+    .btn-portfolio:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
+      color: #1a2642;
+    }
+
+    /* Amélioration du titre */
+    .hero-content h1 {
+      color: #fff;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero-content h1 .highlight {
+      background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-content h2 {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero-content p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    /* Style des boutons d'action */
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .btn-primary {
+      padding: 12px 30px;
+      background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
+      color: #1a2642;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0, 212, 255, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 212, 255, 0.5);
+      color: #1a2642;
+    }
+
+    /* Social links */
+    .social-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: rgba(0, 212, 255, 0.1);
+      border: 2px solid rgba(0, 212, 255, 0.3);
+      border-radius: 50%;
+      color: #00d4ff;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: rgba(0, 212, 255, 0.2);
+      border-color: #00d4ff;
+      transform: translateY(-3px);
+    }
+
+    /* Scroll top button */
+    #scroll-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
+      border-radius: 50%;
+      box-shadow: 0 5px 20px rgba(0, 212, 255, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    #scroll-top:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Responsive mobile */
+    @media (max-width: 768px) {
+      .hero-image .image-wrapper {
+        max-width: 250px;
+        margin-bottom: 30px;
+      }
+
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content h2 {
+        font-size: 1.2rem;
+      }
+
+      .hero-content p {
+        font-size: 0.95rem;
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .btn-primary,
+      .btn-portfolio {
+        width: 100%;
+        text-align: center;
+        margin-left: 0 !important;
+      }
+
+      .social-links {
+        justify-content: center;
+      }
+
+      #scroll-top {
+        width: 45px;
+        height: 45px;
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -42,86 +270,91 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
-
-    
-    <!--------------------------------FAVICONS---------------------------------------------------->
-    <link rel="icon" type="image/png" href="/assets/pj/favicons/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/pj/favicons/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/pj/favicons/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/pj/favicons/apple-touch-icon.png" />
-    <link rel="manifest" href="/assets/pj/favicons/site.webmanifest" />
-
       <nav id="navmenu" class="navmenu">
         <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="index.html" class="active">Accueil</a></li>
           <li><a href="about.html">Profil</a></li>
           <li><a href="resume.html">Formation</a></li>
           <li><a href="services.html">Expériences</a></li>
           <li><a href="portfolio.html">Compétences</a></li>
-           <li><a href="projet.html">Projects</a></li>
-          <li><a href="certif.html">Certification</a></li>
+          <li><a href="projet.html">Projets</a></li>
+          <li><a href="certif.html">Certifications</a></li>
           <li><a href="contact.html">Contact</a></li>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </ul>
       </nav>
 
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
+      <!-- Bouton hamburger - CORRECTION ICI -->
+      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 
     </div>
   </header>
 
   <main class="main">
 
-    <!-- page d'accueil-->
+    <!-- Section Hero -->
     <section id="hero" class="hero section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row gy-4 align-items-center">
+          
           <div class="col-lg-6 order-2 order-lg-1">
             <div class="hero-content">
-              <h1 data-aos="fade-up" data-aos-delay="200">Hello, I'm <span class="highlight">Blaise Mahoungou</span></h1>
-              <h2 data-aos="fade-up" data-aos-delay="300">Creative <span class="typed" data-typed-items="Administrateur systèmes&réseaux / Analyste soc"></span></h2>
-              <p data-aos="fade-up" data-aos-delay="400">Passionné par les technologies de l'information, je suis constamment motivé à approfondir mes compétences en systèmes, réseaux et cybersécurité, afin de contribuer activement à la protection des infrastructures numériques et à l'optimisation des performances réseau.
-
- 
- 
- </p>
+              <h1 data-aos="fade-up" data-aos-delay="200">
+                Hello, I'm <span class="highlight">Blaise Mahoungou</span>
+              </h1>
+              <h2 data-aos="fade-up" data-aos-delay="300">
+                Creative <span class="typed" data-typed-items="Administrateur systèmes&réseaux, Analyste SOC"></span>
+              </h2>
+              <p data-aos="fade-up" data-aos-delay="400">
+                Passionné par les technologies de l'information, je suis constamment motivé à approfondir mes compétences en systèmes, réseaux et cybersécurité, afin de contribuer activement à la protection des infrastructures numériques et à l'optimisation des performances réseau.
+              </p>
+              
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="500">
-                <a href="assets/certifs/CV Teddy.pdf" target="_blank" class="btn btn-primary">CV</a>
-
+                <a href="assets/certifs/CV Teddy.pdf" target="_blank" class="btn btn-primary">Télécharger CV</a>
+                <a href="portfolio.html" class="btn-portfolio">Voir Portfolio</a>
               </div>
+              
               <div class="social-links" data-aos="fade-up" data-aos-delay="600">
-                <a href="https://www.linkedin.com/in/blaise-mahoungou-b35446255/"><i class="bi bi-linkedin"></i></a>
-                <a href="https://github.com/blaiseteddy/blaiseteddy.github.io"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/blaise-mahoungou-b35446255/" target="_blank" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/blaiseteddy/blaiseteddy.github.io" target="_blank" aria-label="GitHub">
+                  <i class="bi bi-github"></i>
+                </a>
               </div>
             </div>
           </div>
-          <div class="col-lg-5 order-1 order-lg-">
+          
+          <div class="col-lg-5 order-1 order-lg-2">
             <div class="hero-image" data-aos="zoom-in" data-aos-delay="300">
               <div class="image-wrapper">
-                <img src="assets/img/image3.jpeg" alt="blaise-mahoungou-b35446255" class="img-fluid">
+                <img src="assets/img/image3.jpeg" alt="Blaise Mahoungou - Administrateur systèmes et réseaux" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          
         </div>
-
       </div>
-
-    </section><!-- /Hero Section -->
+    </section>
 
   </main>
 
-  
+  <!-- Footer -->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Blaise Mahoungou</strong> <span>Tous droits réservés</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/blaise-mahoungou-b35446255/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="https://github.com/blaiseteddy/blaiseteddy.github.io" target="_blank"><i class="bi bi-github"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
