@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Resume - FolioOne Bootstrap Template</title>
+  <title>Formation - Portfolio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,13 +27,131 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: FolioOne
-  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-  * Updated: Aug 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0a1628 0%, #1a2942 100%);
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .formation-section {
+      padding: 80px 0;
+      color: #fff;
+    }
+
+    .formation-title {
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 80px;
+      background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .formation-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .formation-card {
+      background: rgba(15, 30, 60, 0.6);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .formation-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 153, 255, 0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .formation-card:hover::before {
+      opacity: 1;
+    }
+
+    .formation-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0, 212, 255, 0.5);
+      box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+    }
+
+    .formation-icon {
+      font-size: 3rem;
+      color: #00d4ff;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .formation-card h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 15px;
+      line-height: 1.4;
+      position: relative;
+      z-index: 1;
+    }
+
+    .formation-card h4 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #00d4ff;
+      margin-bottom: 10px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .formation-card p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .formation-card .date {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+      margin-top: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 768px) {
+      .formation-title {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+      }
+
+      .formation-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .formation-card {
+        padding: 30px;
+      }
+    }
+  </style>
 </head>
 
 <body class="resume-page">
@@ -41,19 +159,14 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">Profil</a></li>
-          <li><a href="resume.html">Formation</a></li>
+          <li><a href="resume.html" class="active">Formation</a></li>
           <li><a href="services.html">Expériences</a></li>
           <li><a href="portfolio.html">Compétences</a></li>
-           <li><a href="projet.html">Projects</a></li>
+          <li><a href="projet.html">Projects</a></li>
           <li><a href="certif.html">Certification</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -72,51 +185,57 @@
 
   <main class="main">
 
-    <!-- Resume Section -->
-    <section id="resume" class="resume section">
+    <!-- Formation Section -->
+    <section class="formation-section">
+      <div class="container">
+        <h2 class="formation-title">Formations</h2>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-6">
-
-            <!-- Education Section -->
-            <div class="resume-item" data-aos="fade-up">
-              <h3 class="resume-title">Education</h3>
-
-              <div class="resume-content">
-                <article class="education-item">
-                  <h4>Master of Computer Science</h4>
-                  <h5>2019 - 2021</h5>
-                  <p class="institution"><em>Stanford University, California</em></p>
-                  <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-                </article>
-
-                <article class="education-item">
-                  <h4>Bachelor of Computer Science</h4>
-                  <h5>2015 - 2019</h5>
-                  <p class="institution"><em>Massachusetts Institute of Technology</em></p>
-                  <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis delectus nihil temporibus sapiente</p>
-                </article>
-              </div>
-            </div><!-- End Education Section -->
+        <div class="formation-container">
           
+          <!-- Formation 1 -->
+          <div class="formation-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="formation-icon">
+              <i class="bi bi-mortarboard"></i>
+            </div>
+            <h3>Mastère Expert Lead<br>Développeur Fullstack</h3>
+            <h4>ITIC Paris</h4>
+            <p>Titre RNCP de niveau 7 (BAC +5)</p>
+            <p class="date">2024 - 2026</p>
+          </div>
 
-    </section><!-- /Resume Section -->
+          <!-- Formation 2 -->
+          <div class="formation-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="formation-icon">
+              <i class="bi bi-mortarboard"></i>
+            </div>
+            <h3>Bachelor Développeur<br>Concepteur d'Application</h3>
+            <h4>OpenClassrooms</h4>
+            <p>Titre RNCP niveau 6 (BAC +3/4)</p>
+            <p class="date">2022 - 2023</p>
+          </div>
+
+          <!-- Formation 3 -->
+          <div class="formation-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="formation-icon">
+              <i class="bi bi-mortarboard"></i>
+            </div>
+            <h3>Licence en Informatique</h3>
+            <h4>Université Marien Ngouabi</h4>
+            <p>BAC +3</p>
+            <p class="date">2018 - 2021</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer" style="background: rgba(10, 22, 40, 0.95);">
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">FolioOne</strong> <span>All Rights Reserved<br></span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Portfolio</strong> <span>All Rights Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -125,10 +244,6 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>

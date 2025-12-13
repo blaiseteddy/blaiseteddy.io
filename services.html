@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Services - FolioOne Bootstrap Template</title>
+  <title>Expériences - Portfolio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,13 +27,215 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: FolioOne
-  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-  * Updated: Aug 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #0f1c35 0%, #1a2942 100%);
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+
+    .experience-section {
+      padding: 80px 0 100px;
+    }
+
+    .experience-title {
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 115px;
+      background: linear-gradient(135deg, #00d4ff 0%, #00b4d8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .timeline-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+    }
+
+    /* Ligne verticale centrale */
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, rgba(0, 212, 255, 0.3) 0%, rgba(0, 180, 216, 0.1) 100%);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      display: flex;
+      margin-bottom: 80px;
+      position: relative;
+    }
+
+    .timeline-item:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .timeline-item:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .timeline-content {
+      width: calc(50% - 60px);
+      background: rgba(15, 30, 60, 0.6);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 20px;
+      padding: 35px;
+      position: relative;
+      backdrop-filter: blur(10px);
+      transition: all 0.4s ease;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 212, 255, 0.5);
+      box-shadow: 0 15px 35px rgba(0, 212, 255, 0.2);
+    }
+
+    /* Icône centrale */
+    .timeline-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #ff9500 0%, #ff6b00 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      box-shadow: 0 0 20px rgba(255, 149, 0, 0.4);
+      border: 4px solid #0f1c35;
+    }
+
+    .timeline-icon i {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .timeline-item:nth-child(even) .timeline-icon {
+      background: linear-gradient(135deg, #00d4ff 0%, #0099ff 100%);
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+    }
+
+    .timeline-date {
+      font-size: 0.95rem;
+      color: #00d4ff;
+      font-weight: 600;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .timeline-content h3 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .timeline-location {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.95rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 8px;
+    }
+
+    .timeline-location i {
+      font-size: 1rem;
+    }
+
+    .timeline-company {
+      font-size: 1rem;
+      color: #00d4ff;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .timeline-description {
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+
+    .timeline-description ul {
+      margin: 15px 0 0 0;
+      padding-left: 20px;
+    }
+
+    .timeline-description li {
+      margin-bottom: 10px;
+      color: rgba(255, 255, 255, 0.75);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .timeline-container::before {
+        left: 30px;
+      }
+
+      .timeline-item {
+        flex-direction: row !important;
+        margin-bottom: 60px;
+      }
+
+      .timeline-content {
+        width: calc(100% - 90px);
+        margin-left: 90px;
+      }
+
+      .timeline-icon {
+        left: 30px;
+        transform: translateX(0);
+      }
+
+      .timeline-title {
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .timeline-content {
+        padding: 25px;
+      }
+
+      .timeline-content h3 {
+        font-size: 1.3rem;
+      }
+
+      .timeline-icon {
+        width: 60px;
+        height: 60px;
+      }
+
+      .timeline-icon i {
+        font-size: 1.5rem;
+      }
+    }
+
+    /* Header */
+    #header {
+      backdrop-filter: blur(10px);
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(15, 28, 53, 0.95);
+    }
+  </style>
 </head>
 
 <body class="services-page">
@@ -41,19 +243,14 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
       <nav id="navmenu" class="navmenu">
         <ul>
-      <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">Profil</a></li>
           <li><a href="resume.html">Formation</a></li>
-          <li><a href="services.html">Expériences</a></li>
+          <li><a href="services.html" class="active">Expériences</a></li>
           <li><a href="portfolio.html">Compétences</a></li>
-           <li><a href="projet.html">Projects</a></li>
+          <li><a href="projet.html">Projects</a></li>
           <li><a href="certif.html">Certification</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -72,82 +269,102 @@
 
   <main class="main">
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
+    <!-- Experience Section -->
+    <section class="experience-section">
+      <div class="container">
+        <h2 class="experience-title" data-aos="fade-up">Expériences Professionnelles</h2>
 
-      <!-- Section Title -->
-       <section id="resume" class="resume section">
+        <div class="timeline-container">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Resume</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-          <div class="col-lg-6">
-
-          <div class="col-lg-6">
-            <!-- Experience Section -->
-            <div class="resume-item" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Professional Experience</h3>
-
-              <div class="resume-content">
-                <article class="experience-item">
-                  <h4>Senior Software Engineer</h4>
-                  <h5>2021 - Present</h5>
-                  <p class="company"><em>Google, Mountain View, CA</em></p>
-                  <ul>
-                    <li>Lead in the development, implementation, and optimization of web applications using modern technologies</li>
-                    <li>Delegate tasks to the 7 members of the development team and provide counsel on all aspects of the project</li>
-                    <li>Supervise the assessment of all web applications, mobile apps, and software platforms for quality and efficiency</li>
-                    <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-                  </ul>
-                </article>
-
-                <article class="experience-item">
-                  <h4>Software Engineer</h4>
-                  <h5>2019 - 2021</h5>
-                  <p class="company"><em>Microsoft, Redmond, WA</em></p>
-                  <ul>
-                    <li>Developed numerous marketing programs (logos, brochures, infographics, presentations, and advertisements)</li>
-                    <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                    <li>Recommended and consulted with clients on the most appropriate software platforms</li>
-                    <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-                  </ul>
-                </article>
-
-                <article class="experience-item">
-                  <h4>Junior Software Developer</h4>
-                  <h5>2017 - 2019</h5>
-                  <p class="company"><em>Apple Inc., Cupertino, CA</em></p>
-                  <ul>
-                    <li>Implemented responsive websites and web applications using modern JavaScript frameworks</li>
-                    <li>Collaborated with senior developers to maintain and optimize existing applications</li>
-                    <li>Participated in code reviews and contributed to team documentation efforts</li>
-                    <li>Assisted in the development of RESTful APIs and microservices</li>
-                  </ul>
-                </article>
+          <!-- Expérience 1 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="timeline-content">
+              <div class="timeline-date">Sept 2025 - Présent</div>
+              <h3>Développeur Fullstack / Mentor</h3>
+              <div class="timeline-location">
+                <i class="bi bi-geo-alt"></i>
+                <span>Paris, France</span>
               </div>
-            </div><!-- End Experience Section -->
+              <div class="timeline-description">
+                Conception de l'application ITIC COMPANION, un outil de gamification scolaire connecté à l'ERP Ymag Ypareo. En parallèle, j'assure le suivi et l'encadrement technique d'étudiants du BTS au Master et la mise en place d'une architecture microservices documentée pour le campus numérique.
+              </div>
+            </div>
+            <div class="timeline-icon">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
           </div>
+
+          <!-- Expérience 2 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="timeline-content">
+              <div class="timeline-date">Oct 2024 - Sept 2025</div>
+              <h3>Tech Lead / Chef de projet</h3>
+              <div class="timeline-location">
+                <i class="bi bi-geo-alt"></i>
+                <span>Cergy, France</span>
+              </div>
+              <div class="timeline-company">XKSGROUP</div>
+              <div class="timeline-description">
+                Encadrement technique des projets et conception d'architectures robustes. Revue de code, gestion de la dette technique et accompagnement des développeurs juniors dans leur montée en compétence.
+              </div>
+            </div>
+            <div class="timeline-icon">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+          </div>
+
+          <!-- Expérience 3 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="timeline-content">
+              <div class="timeline-date">2019 - 2021</div>
+              <h3>Software Engineer</h3>
+              <div class="timeline-location">
+                <i class="bi bi-geo-alt"></i>
+                <span>Microsoft, Redmond, WA</span>
+              </div>
+              <div class="timeline-description">
+                <ul>
+                  <li>Développement de programmes marketing (logos, brochures, infographies, présentations)</li>
+                  <li>Gestion simultanée de 5 projets sous pression</li>
+                  <li>Conseil et recommandation aux clients sur les plateformes logicielles appropriées</li>
+                  <li>Création de 4+ présentations de design par mois</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-icon">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+          </div>
+
+          <!-- Expérience 4 -->
+          <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="timeline-content">
+              <div class="timeline-date">2017 - 2019</div>
+              <h3>Junior Software Developer</h3>
+              <div class="timeline-location">
+                <i class="bi bi-geo-alt"></i>
+                <span>Apple Inc., Cupertino, CA</span>
+              </div>
+              <div class="timeline-description">
+                <ul>
+                  <li>Implémentation de sites web responsifs avec des frameworks JavaScript modernes</li>
+                  <li>Collaboration avec des développeurs seniors pour maintenir et optimiser les applications</li>
+                  <li>Participation aux revues de code et contribution à la documentation</li>
+                  <li>Assistance au développement d'APIs RESTful et de microservices</li>
+                </ul>
+              </div>
+            </div>
+            <div class="timeline-icon">
+              <i class="bi bi-briefcase-fill"></i>
+            </div>
+          </div>
+
         </div>
-
       </div>
-
-    </section><!-- /Resume Section -->
-
-  </main>
-
-   
-
-    </section><!-- /Services Section -->
+    </section>
 
   </main>
 
-  
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

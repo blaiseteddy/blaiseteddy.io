@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - FolioOne Bootstrap Template</title>
+  <title>Contact - Portfolio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,13 +27,187 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: FolioOne
-  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
-  * Updated: Aug 23 2025 with Bootstrap v5.3.7
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+  <style>
+    body {
+      background: linear-gradient(135deg, #1a2642 0%, #2d3f5f 100%);
+      min-height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+    }
+
+    .contact-section {
+      padding: 80px 0;
+    }
+
+    .contact-title {
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .contact-subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 20px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-job {
+      text-align: center;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 80px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.8;
+    }
+
+    .contact-job strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .contact-card {
+      background: rgba(15, 30, 60, 0.5);
+      border: 1px solid rgba(0, 212, 255, 0.2);
+      border-radius: 20px;
+      padding: 50px 30px;
+      text-align: center;
+      transition: all 0.4s ease;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 255, 204, 0.05) 100%);
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .contact-card:hover::before {
+      opacity: 1;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(0, 212, 255, 0.5);
+      box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+    }
+
+    .contact-icon {
+      font-size: 3.5rem;
+      color: #00d4ff;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+    }
+
+    .contact-label {
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-value {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+      word-break: break-word;
+    }
+
+    .contact-value a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .contact-value a:hover {
+      color: #00d4ff;
+    }
+
+    .external-link-icon {
+      font-size: 1.1rem;
+      margin-left: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .contact-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+      }
+
+      .contact-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+      }
+
+      .contact-job {
+        font-size: 0.95rem;
+        margin-bottom: 50px;
+      }
+
+      .contact-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .contact-card {
+        padding: 40px 25px;
+      }
+
+      .contact-value {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* Header transparent */
+    #header {
+      background: rgba(26, 38, 66, 0.95) !important;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(26, 38, 66, 0.95);
+      margin-top: 80px;
+    }
+  </style>
 </head>
 
 <body class="contact-page">
@@ -41,21 +215,16 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
-      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-      <img src="assets/img/logo.webp" alt="">
-      <h1 class="sitename">FolioOne</h1> 
-    </a> -->
-
       <nav id="navmenu" class="navmenu">
         <ul>
-        <li><a href="index.html" class="active">Accueil</a></li>
+          <li><a href="index.html">Accueil</a></li>
           <li><a href="about.html">Profil</a></li>
           <li><a href="resume.html">Formation</a></li>
           <li><a href="services.html">Expériences</a></li>
           <li><a href="portfolio.html">Compétences</a></li>
-           <li><a href="projet.html">Projects</a></li>
+          <li><a href="projet.html">Projects</a></li>
           <li><a href="certif.html">Certification</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -73,108 +242,66 @@
   <main class="main">
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section">
+    <section class="contact-section">
+      <div class="container">
+        <h2 class="contact-title" data-aos="fade-up">Travaillons ensemble</h2>
+        
+        <p class="contact-subtitle" data-aos="fade-up" data-aos-delay="100">
+          Je suis actuellement à la recherche d'un <strong>CDI en tant que Développeur Full Stack ou Tech Lead</strong>.
+        </p>
+        
+        <p class="contact-job" data-aos="fade-up" data-aos-delay="150">
+          N'hésitez pas à me contacter pour discuter de vos projets !
+        </p>
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row g-4 g-lg-5">
-          <div class="col-lg-5">
-            <div class="info-box" data-aos="fade-up" data-aos-delay="200">
-              <h3>Contact Info</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
-
-              <div class="info-item" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box">
-                  <i class="bi bi-geo-alt"></i>
-                </div>
-                <div class="content">
-                  <h4>Our Location</h4>
-                  <p>A108 Adam Street</p>
-                  <p>New York, NY 535022</p>
-                </div>
-              </div>
-
-              <div class="info-item" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box">
-                  <i class="bi bi-telephone"></i>
-                </div>
-                <div class="content">
-                  <h4>Phone Number</h4>
-                  <p>+1 5589 55488 55</p>
-                  <p>+1 6678 254445 41</p>
-                </div>
-              </div>
-
-              <div class="info-item" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box">
-                  <i class="bi bi-envelope"></i>
-                </div>
-                <div class="content">
-                  <h4>Email Address</h4>
-                  <p>info@example.com</p>
-                  <p>contact@example.com</p>
-                </div>
-              </div>
+        <div class="contact-container">
+          
+          <!-- Email -->
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="contact-icon">
+              <i class="bi bi-envelope"></i>
+            </div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">
+              <a href="mailto:nebel.mass@gmail.com">micheemahoungou8@gmail.com</a>
             </div>
           </div>
 
-          <div class="col-lg-7">
-            <div class="contact-form" data-aos="fade-up" data-aos-delay="300">
-              <h3>Get In Touch</h3>
-              <p>Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum ante ipsum primis.</p>
+          <!-- Téléphone -->
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="contact-icon">
+              <i class="bi bi-telephone"></i>
+            </div>
+            <div class="contact-label">Téléphone</div>
+            <div class="contact-value">
+              <a href="tel:+33775725582">+33753010409</a>
+            </div>
+          </div>
 
-              <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="row gy-4">
-
-                  <div class="col-md-6">
-                    <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-                  </div>
-
-                  <div class="col-md-6 ">
-                    <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-                  </div>
-
-                  <div class="col-12">
-                    <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-                  </div>
-
-                  <div class="col-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                    <button type="submit" class="btn">Send Message</button>
-                  </div>
-
-                </div>
-              </form>
-
+          <!-- GitHub -->
+          <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="contact-icon">
+              <i class="bi bi-github"></i>
+            </div>
+            <div class="contact-label">GitHub</div>
+            <div class="contact-value">
+              <a href="https://github.com/blaiseteddy" target="_blank" rel="noopener noreferrer">
+                @Blaise
+                <i class="bi bi-box-arrow-up-right external-link-icon"></i>
+              </a>
             </div>
           </div>
 
         </div>
-
       </div>
-
-    </section><!-- /Contact Section -->
+    </section>
 
   </main>
 
   <footer id="footer" class="footer">
-
     <div class="container">
-      <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">FolioOne</strong> <span>All Rights Reserved<br></span></p>
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Portfolio</strong> <span>All Rights Reserved</span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -183,14 +310,9 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-
   </footer>
 
   <!-- Scroll Top -->
