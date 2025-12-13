@@ -362,140 +362,96 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Mobile Navigation - Modern Hamburger Menu
+# Mobile Navigation - Clean Default
 --------------------------------------------------------------*/
 
-/* Hide mobile toggle on desktop */
+/* Hide toggle on desktop */
 .mobile-nav-toggle {
   display: none;
 }
 
-/* Mobile Navigation Styles */
+/* Mobile Navigation */
 @media (max-width: 1199px) {
 
-  /* Hamburger Button - BRIGHT & VISIBLE */
+  /* Toggle Button */
   .mobile-nav-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    font-size: 26px;
+    display: block;
+    font-size: 28px;
     cursor: pointer;
-    color: #00d4ff;
-    background: rgba(0, 212, 255, 0.15);
-    border: 2px solid rgba(0, 212, 255, 0.4);
-    border-radius: 8px;
-    transition: all 0.3s ease;
+    color: var(--nav-color);
+    line-height: 0;
+    margin-right: 10px;
+    transition: color 0.3s;
     z-index: 9999;
-    position: relative;
   }
 
   .mobile-nav-toggle:hover {
-    background: rgba(0, 212, 255, 0.25);
-    border-color: #00d4ff;
-    transform: scale(1.05);
+    color: var(--accent-color);
   }
 
-  /* Mobile Menu Container - OPTIMIZED */
+  /* Menu Container */
   .navmenu {
     position: fixed;
-    top: 0;
+    top: 60px;
     right: -100%;
-    width: 300px;
-    height: 100vh;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.3);
+    width: 280px;
+    height: calc(100vh - 60px);
+    background: var(--nav-mobile-background-color);
     transition: right 0.3s ease;
     overflow-y: auto;
-    overflow-x: hidden;
-    z-index: 9998;
-    padding: 70px 15px 20px 15px;
-    -webkit-overflow-scrolling: touch;
+    z-index: 9997;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
   }
 
-  /* Active state - menu visible */
+  /* Menu visible */
   body.mobile-nav-active .navmenu {
     right: 0;
   }
 
-  /* Dark overlay */
-  body.mobile-nav-active::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 9997;
-  }
-
-  /* Prevent body scroll */
+  /* Prevent scroll */
   body.mobile-nav-active {
     overflow: hidden;
   }
 
-  /* Menu List - UNIFORM SPACING */
+  /* Menu list */
   .navmenu ul {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 0 20px;
     margin: 0;
     list-style: none;
-    gap: 10px;
   }
 
-  .navmenu ul li {
+  .navmenu li {
     margin: 0;
-    width: 100%;
   }
 
-  /* Menu Links - UNIFORM & CLEAN */
+  /* Menu links - UNIFORM */
   .navmenu a,
   .navmenu a:focus {
-    color: #1a2642;
-    padding: 14px 18px;
+    color: var(--nav-color);
+    padding: 12px 15px;
     font-family: var(--nav-font);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     display: block;
     text-decoration: none;
-    text-align: left;
-    border-radius: 8px;
-    background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    transition: all 0.25s ease;
-    border-left: 3px solid transparent;
-    width: 100%;
-    box-sizing: border-box;
+    border-radius: 5px;
+    transition: all 0.3s ease;
   }
 
-  /* Hover & Active States */
+  /* Hover effect - FIXED */
   .navmenu a:hover {
-    background: linear-gradient(135deg, #00d4ff 0%, #00b4d8 100%);
-    color: #fff;
-    transform: translateX(3px);
-    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.35);
-    border-left-color: #00ffcc;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
+    padding-left: 20px;
   }
 
+  /* Active page */
   .navmenu a.active {
-    background: linear-gradient(135deg, #00d4ff 0%, #00b4d8 100%);
-    color: #fff;
-    border-left-color: #00ffcc;
-    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.4);
-  }
-
-  /* Smooth scrolling */
-  .navmenu {
-    scroll-behavior: smooth;
-  }
-
-  /* Toggle when menu open */
-  body.mobile-nav-active .mobile-nav-toggle {
-    background: rgba(255, 255, 255, 0.95);
-    border-color: #00d4ff;
+    color: var(--accent-color);
+    background: color-mix(in srgb, var(--accent-color), transparent 90%);
   }
 }
 
