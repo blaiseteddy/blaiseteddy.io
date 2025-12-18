@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Formation - Portfolio</title>
+  <title>Resume - FolioOne Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -15,9 +15,25 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: FolioOne
+  * Template URL: https://bootstrapmade.com/folioone-bootstrap-portfolio-website-template/
+  * Updated: Aug 23 2025 with Bootstrap v5.3.7
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body class="resume-page">
@@ -25,21 +41,24 @@
   <header id="header" class="header d-flex align-items-center light-background sticky-top">
     <div class="container position-relative d-flex align-items-center justify-content-between">
 
+      <!-- <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+      <img src="assets/img/logo.webp" alt="">
+      <h1 class="sitename">FolioOne</h1> 
+    </a> -->
+
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Accueil</a></li>
+          <li><a href="index.html" class="active">Accueil</a></li>
           <li><a href="about.html">Profil</a></li>
-          <li><a href="resume.html" class="active">Formation</a></li>
+          <li><a href="resume.html">Formation</a></li>
           <li><a href="services.html">Expériences</a></li>
           <li><a href="portfolio.html">Compétences</a></li>
-          <li><a href="projet.html">Projets</a></li>
-          <li><a href="certif.html">Certifications</a></li>
+           <li><a href="projet.html">Projects</a></li>
+          <li><a href="certif.html">Certification</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <!-- Bouton hamburger -->
-      <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
 
       <div class="header-social-links">
         <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -53,58 +72,51 @@
 
   <main class="main">
 
-    <!-- Formation Section -->
-    <section class="formation-section">
-      <div class="container">
-        <h2 class="formation-title">Formations</h2>
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
 
-        <div class="formation-container">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
+      </div><!-- End Section Title -->
 
-          <!-- Formation 1 -->
-          <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="icon" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 25px;">
-              <i class="bi bi-mortarboard"></i>
-            </div>
-            <h3>Licence Général <br>Réseau et Cbersécurité</h3>
-            <h4>CNAM paris 3ème</h4>
-            <p>Titre RNCP de niveau 7 (BAC +5)</p>
-            <p class="date">2025 - 2026</p>
-          </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-          <!-- Formation 2 -->
-          <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
-            <div class="icon" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 25px;">
-              <i class="bi bi-mortarboard"></i>
-            </div>
-            <h3>Bachelor Développeur<br>Concepteur d'Application</h3>
-            <h4>OpenClassrooms</h4>
-            <p>Titre RNCP niveau 6 (BAC +3/4)</p>
-            <p class="date">2022 - 2023</p>
-          </div>
+        <div class="row">
+          <div class="col-lg-6">
 
-          <!-- Formation 3 -->
-          <div class="glass-card" data-aos="fade-up" data-aos-delay="300">
-            <div class="icon" style="font-size: 3rem; color: var(--accent-color); margin-bottom: 25px;">
-              <i class="bi bi-mortarboard"></i>
-            </div>
-            <h3>Licence en Informatique</h3>
-            <h4>Université Marien Ngouabi</h4>
-            <p>BAC +3</p>
-            <p class="date">2018 - 2021</p>
-          </div>
+            <!-- Education Section -->
+            <div class="resume-item" data-aos="fade-up">
+              <h3 class="resume-title">Education</h3>
 
-        </div>
-      </div>
-    </section>
+              <div class="resume-content">
+                <article class="education-item">
+                  <h4>Master of Computer Science</h4>
+                  <h5>2019 - 2021</h5>
+                  <p class="institution"><em>Stanford University, California</em></p>
+                  <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
+                </article>
+
+                <article class="education-item">
+                  <h4>Bachelor of Computer Science</h4>
+                  <h5>2015 - 2019</h5>
+                  <p class="institution"><em>Massachusetts Institute of Technology</em></p>
+                  <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis delectus nihil temporibus sapiente</p>
+                </article>
+              </div>
+            </div><!-- End Education Section -->
+          
+
+    </section><!-- /Resume Section -->
 
   </main>
 
-  <footer id="footer" class="footer" style="background: rgba(10, 22, 40, 0.95);">
+  <footer id="footer" class="footer">
 
     <div class="container">
       <div class="copyright text-center ">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">Portfolio</strong> <span>All Rights
-            Reserved<br></span></p>
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">FolioOne</strong> <span>All Rights Reserved<br></span></p>
       </div>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -113,6 +125,10 @@
         <a href=""><i class="bi bi-linkedin"></i></a>
       </div>
       <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
@@ -120,8 +136,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
