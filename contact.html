@@ -29,180 +29,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <style>
-    .contact-section {
-      padding: 80px 0;
-    }
-
-    .contact-title {
-      text-align: center;
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      background: linear-gradient(135deg, #00d4ff 0%, #00ffcc 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .contact-subtitle {
-      text-align: center;
-      font-size: 1.2rem;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 20px;
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .contact-job {
-      text-align: center;
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 80px;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.8;
-    }
-
-    .contact-job strong {
-      color: #fff;
-      font-weight: 600;
-    }
-
-    .contact-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .contact-card {
-      background: rgba(15, 30, 60, 0.5);
-      border: 1px solid rgba(0, 212, 255, 0.2);
-      border-radius: 20px;
-      padding: 50px 30px;
-      text-align: center;
-      transition: all 0.4s ease;
-      backdrop-filter: blur(10px);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .contact-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(0, 255, 204, 0.05) 100%);
-      opacity: 0;
-      transition: opacity 0.4s ease;
-      z-index: 0;
-    }
-
-    .contact-card:hover::before {
-      opacity: 1;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(0, 212, 255, 0.5);
-      box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
-    }
-
-    .contact-icon {
-      font-size: 3.5rem;
-      color: #00d4ff;
-      margin-bottom: 25px;
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-    }
-
-    .contact-label {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.6);
-      margin-bottom: 15px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .contact-value {
-      font-size: 1.3rem;
-      font-weight: 600;
-      color: #fff;
-      position: relative;
-      z-index: 1;
-      word-break: break-word;
-    }
-
-    .contact-value a {
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .contact-value a:hover {
-      color: #00d4ff;
-    }
-
-    .external-link-icon {
-      font-size: 1.1rem;
-      margin-left: 5px;
-    }
-
-    @media (max-width: 768px) {
-      .contact-title {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-      }
-
-      .contact-subtitle {
-        font-size: 1.1rem;
-        margin-bottom: 15px;
-      }
-
-      .contact-job {
-        font-size: 0.95rem;
-        margin-bottom: 50px;
-      }
-
-      .contact-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .contact-card {
-        padding: 40px 25px;
-      }
-
-      .contact-value {
-        font-size: 1.1rem;
-      }
-    }
-
-    /* Header transparent */
-    #header {
-      background: rgba(26, 38, 66, 0.95) !important;
-      backdrop-filter: blur(10px);
-    }
-
-    /* Footer */
-    footer {
-      background: rgba(26, 38, 66, 0.95);
-      margin-top: 80px;
-    }
-  </style>
+  <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 
 <body class="contact-page">
@@ -254,7 +81,7 @@
         <div class="contact-container">
 
           <!-- Email -->
-          <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="glass-card contact-card" data-aos="fade-up" data-aos-delay="200">
             <div class="contact-icon">
               <i class="bi bi-envelope"></i>
             </div>
@@ -265,7 +92,7 @@
           </div>
 
           <!-- Téléphone -->
-          <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="glass-card contact-card" data-aos="fade-up" data-aos-delay="300">
             <div class="contact-icon">
               <i class="bi bi-telephone"></i>
             </div>
@@ -276,7 +103,7 @@
           </div>
 
           <!-- GitHub -->
-          <div class="contact-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="glass-card contact-card" data-aos="fade-up" data-aos-delay="400">
             <div class="contact-icon">
               <i class="bi bi-github"></i>
             </div>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - FolioOne Bootstrap Template</title>
+  <title>À propos - Blaise MAHOUNGOU</title>
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -26,6 +26,8 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 
 <body class="about-page">
@@ -55,43 +57,66 @@
 
   <main class="main">
     <!-- ======= About Section ======= -->
-    <section id="about" class="about section py-5">
+    <section class="about-section">
       <div class="container" data-aos="fade-up">
-        <!-- Section Title -->
-        <div class="section-title mb-5 text-center">
-          <h2>À propos de moi</h2>
-          <p>Découvrez qui je suis, mes motivations et ma passion pour le développement et l’informatique.</p>
+
+        <!-- Titre principal -->
+        <h1 class="main-title" data-aos="fade-down">À propos de moi</h1>
+
+        <!-- Grille des cartes -->
+        <div class="row g-4">
+
+          <!-- Carte Profil -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+            <div class="glass-card info-card">
+              <h3>Profil</h3>
+              <p>
+                Développeur Full Stack avec 6 ans d'expérience, spécialisé dans la conception de solutions robustes et
+                optimisées. Expert en architecture logicielle et déploiement cloud, j'ai piloté des projets en
+                méthodologie agile et accompagné des équipes techniques vers l'excellence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Carte Recherche -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <div class="glass-card info-card">
+              <h3>Recherche</h3>
+
+              <div class="info-item">
+                <span class="info-label">Type de contrat :</span>
+                <span class="info-value"> CDI/CDD - Développeur Full Stack / Tech Lead</span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Disponibilité :</span>
+                <span class="info-value"> Immédiate</span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Mobilité :</span>
+                <span class="info-value"> Île-de-France</span>
+              </div>
+
+              <div class="info-item">
+                <span class="info-label">Permis :</span>
+                <span class="info-value"> B</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
 
-        <!-- Content Row -->
-        <div class="row align-items-center justify-content-between">
-          <!-- Texte à gauche -->
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <h3 class="mb-3">Salut, moi c’est Brandon 👋</h3>
-            <p class="lead">
-              Je suis un développeur créatif et calme d’esprit, passionné par la création d’expériences numériques
-              élégantes et intuitives. J’aime donner vie à des idées à travers des interfaces soignées et performantes.
-            </p>
-            <p>
-              Curieux et rigoureux, je m’efforce de concevoir des solutions modernes en alliant design, performance et
-              accessibilité.
-              Mon objectif : allier esthétique et technologie pour offrir une expérience fluide à chaque utilisateur.
-            </p>
-
-            <a href="assets/certifs/CV Teddy.pdf" target="_blank" class="btn btn-primary mt-3">
-              Voir mon CV
-            </a>
-          </div>
-          <div class="col-lg-5 text-center text-lg-end" data-aos="zoom-in" data-aos-delay="300">
-            <img src="assets/img/image3.jpeg" alt="blaise-mahoungou-b35446255" class="img-fluid rounded shadow"
-              style="max-width: 53%; height: auto; border-radius: 15px;">
-          </div>
-
-          <!-- End About Section -->
+      </div>
+    </section>
+    <!-- End About Section -->
   </main>
 
   <footer id="footer" class="footer py-4 text-center">
-    <p class="mb-0">&copy; 2025 FolioOne. Tous droits réservés.</p>
+    <div class="container">
+      <p class="mb-0">&copy; 2025 Blaise MAHOUNGOU. Tous droits réservés.</p>
+    </div>
   </footer>
 
   <!-- Scroll Top -->
