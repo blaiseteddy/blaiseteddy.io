@@ -68,6 +68,12 @@
     window.addEventListener('load', () => {
       preloader.remove();
     });
+    // Fallback: remove preloader after 5 seconds in case load event doesn't fire
+    setTimeout(() => {
+      if (preloader.parentNode) {
+        preloader.remove();
+      }
+    }, 5000);
   }
 
   /**
