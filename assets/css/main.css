@@ -825,6 +825,8 @@ section,
 
 .hero .hero-image {
   position: relative;
+  width: 450px;
+  height: 600px;
 }
 
 .hero .hero-image .image-wrapper {
@@ -855,12 +857,11 @@ section,
 .hero .hero-image .floating-elements .floating-card {
   position: absolute;
   background: var(--surface-color);
-  padding: 15px 20px;
-  border-radius: 15px;
+  padding: 5px 10px;
+  border-radius: 10px;
   box-shadow: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 90%);
   display: flex;
   align-items: center;
-  gap: 10px;
   font-weight: 600;
   animation: float 3s ease-in-out infinite;
 }
