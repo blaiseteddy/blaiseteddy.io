@@ -35,6 +35,32 @@ body {
     margin-left: 12em;
 }
 
+/* Mobile adjustments for hero section */
+@media (max-width: 992px) {
+    .hero-image img {
+        margin-left: 0;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+    
+    .hero .hero-content {
+        text-align: center;
+    }
+    
+    .hero .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .hero-content h2 {
+        font-size: 1.25rem;
+    }
+    
+    .hero .hero-content p {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+}
+
 /* Section Padding */
 .section-padding {
     padding: 80px 0;
@@ -224,4 +250,13 @@ body {
 .footer p {
     margin: 0;
     color: rgba(255, 255, 255, 0.6);
+}
+
+/* Certification Date */
+.cert-date {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
 }
